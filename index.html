@@ -94,7 +94,6 @@
     /* Testimonials */
     .testimonials { display: flex; flex-wrap: wrap; gap: 1rem; }
     .testimonial { flex: 1 1 300px; background: #fff3cd; padding: 1rem; border-left: 5px solid #ffc107; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-
 /* Testimonials Scroll */
 .testimonials-container {
     overflow: hidden;
@@ -105,7 +104,7 @@
 .testimonials-slider {
     display: flex;
     gap: 1rem;
-    animation: scrollTestimonials 20s linear infinite;
+    animation: scrollTestimonials 15s linear infinite;
 }
 
 .testimonial {
@@ -120,18 +119,16 @@
 
 .testimonial:hover { transform: scale(1.05); }
 
-/* Scroll Animation */
+/* Continuous scroll animation */
 @keyframes scrollTestimonials {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Adjust based on number of testimonials */
+    100% { transform: translateX(-50%); } /* Move half width (because we duplicated slides) */
 }
 
-/* Make slider interactive on hover (pause) */
 .testimonials-container:hover .testimonials-slider {
     animation-play-state: paused;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .testimonial { flex: 0 0 80%; }
 }
