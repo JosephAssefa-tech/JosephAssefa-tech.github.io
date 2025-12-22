@@ -1,1 +1,10 @@
-# JosephAssefa-tech.github.io
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Site</title>
+</head>
+<body>
+    <h1>Hello, I'm Jo!</h1>
+    <p>Welcome to my GitHub Pages site.</p>
+</body>
+</html>
