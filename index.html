@@ -1,10 +1,171 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Personal Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Assefa - Full Stack Developer</title>
+    <style>
+        /* General Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: #f4f6f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background: #0d6efd;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 2rem;
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        section h2 {
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+            color: #0d6efd;
+        }
+
+        /* Contact Info */
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .contact div {
+            flex: 1;
+        }
+
+        /* Skills / Tech */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .skill {
+            background: #0d6efd;
+            color: white;
+            padding: 0.3rem 0.7rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* Projects */
+        .project {
+            margin-bottom: 1rem;
+        }
+        .project h3 {
+            color: #333;
+        }
+        .project p {
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, I'm Jo!</h1>
-    <p>Welcome to my GitHub Pages site.</p>
+
+<header>
+    <h1>Joseph Assefa</h1>
+    <p>Senior Full Stack Developer | Backend Team Lead</p>
+    <p>Email: <a href="mailto:yosephassefa85@gmail.com">yosephassefa85@gmail.com</a> | Phone: +251945948911</p>
+    <p><a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+</header>
+
+<div class="container">
+
+    <section>
+        <h2>Summary</h2>
+        <p>Results-driven Backend focused Team Lead and Senior Full Stack Developer with 7+ years of experience working with international clients building enterprise-grade and mission-critical systems. Led teams delivering high-performance systems used daily by thousands of users, ensuring scalability, reliability, and measurable business impact.</p>
+    </section>
+
+    <section>
+        <h2>Technical Expertise</h2>
+        <div class="skills">
+            <span class="skill">C#</span>
+            <span class="skill">.Net Core</span>
+            <span class="skill">Java</span>
+            <span class="skill">Spring Boot</span>
+            <span class="skill">Angular</span>
+            <span class="skill">React</span>
+            <span class="skill">SQL Server</span>
+            <span class="skill">PostgreSQL</span>
+            <span class="skill">Azure</span>
+            <span class="skill">AWS</span>
+            <span class="skill">Docker</span>
+            <span class="skill">Kubernetes</span>
+            <span class="skill">Redis</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <div class="project">
+            <h3>Backend Team Lead – Custor (Dec 2023 - Present)</h3>
+            <p>Leading backend development for Integrated Vehicle Services Management System, serving 10,000-30,000 daily users, generating $30M+ annual revenue. Mentoring 5 junior developers, optimizing performance with Redis caching and Hangfire, implementing real-time dashboards, and exploring AI/ML for predictive analytics.</p>
+        </div>
+        <div class="project">
+            <h3>Senior Backend Developer – RecogniseDesign, UK (Jun 2025 - Sep 2025)</h3>
+            <p>Developed and maintained Umbraco-based websites, creating custom content types and templates for dynamic content management. Delivered 10+ client websites with SEO-friendly and responsive design.</p>
+        </div>
+        <!-- You can add more projects here -->
+    </section>
+
+</div>
+
+<footer>
+    &copy; 2025 Joseph Assefa. All rights reserved.
+</footer>
+
 </body>
 </html>
