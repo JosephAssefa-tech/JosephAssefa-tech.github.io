@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Joseph Assefa - Full Stack Developer</title>
 <style>
+    /* Reset & Base */
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
     body { background: #f4f6f8; color: #333; line-height: 1.6; scroll-behavior: smooth;}
-    a { color: #007bff; text-decoration: none;}
-    a:hover { text-decoration: underline;}
+    a { text-decoration: none; color: inherit; }
+    a:hover { text-decoration: underline; }
 
     /* Navbar */
     nav {
@@ -26,17 +27,23 @@
     nav a { color: #0d6efd; font-weight: bold; padding: 0.5rem; transition: background 0.3s, transform 0.3s;}
     nav a:hover { background: #e9ecef; border-radius: 5px; transform: scale(1.05); }
 
-    /* Header */
+    /* Hero Section */
     header {
         background: #0d6efd;
         color: white;
         padding: 3rem 1rem;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
         animation: fadeIn 1s ease-in;
     }
-    header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.2rem; margin: 0.3rem 0; }
-    header a { color: white; margin: 0 0.5rem; }
+    header img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid white; }
+    header h1 { font-size: 3rem; }
+    header p { font-size: 1.2rem; }
+    .btn { display: inline-block; background: #ffc107; color: #333; padding: 0.7rem 1.5rem; border-radius: 5px; font-weight: bold; margin-top: 0.5rem; transition: transform 0.3s; }
+    .btn:hover { transform: scale(1.05); }
 
     /* Container */
     .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
@@ -59,7 +66,7 @@
     .skill:nth-child(9){animation-delay: 0.9s;} .skill:nth-child(10){animation-delay: 1s;}
     .skill:hover { transform: scale(1.1); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
 
-    /* Projects */
+    /* Projects Collapsible */
     .project { margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
     .project button {
         width: 100%; text-align: left; background: #f8f9fa; border: none; padding: 1rem;
@@ -76,6 +83,22 @@
     .arrow { transition: transform 0.3s ease; }
     .project.active .arrow { transform: rotate(90deg); }
 
+    /* Project Cards */
+    .project-card { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .card { flex: 1 1 300px; background: #f8f9fa; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .card img { width: 100%; height: 180px; object-fit: cover; }
+    .card-content { padding: 1rem; }
+    .card-content h3 { margin-bottom: 0.5rem; color: #0d6efd; }
+    .card:hover { transform: scale(1.03); }
+
+    /* Testimonials */
+    .testimonials { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .testimonial { flex: 1 1 300px; background: #fff3cd; padding: 1rem; border-left: 5px solid #ffc107; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+
+    /* Contact */
+    .contact a { display: inline-block; background: #0d6efd; color: white; padding: 0.5rem 1rem; border-radius: 5px; margin: 0.3rem; transition: transform 0.3s; }
+    .contact a:hover { transform: scale(1.05); }
+
     /* Footer */
     footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: #555; }
 
@@ -83,33 +106,36 @@
     @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
     @keyframes fadeInUp { from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);} }
 
-    /* Responsive */
-    @media (max-width: 768px) { header h1 { font-size: 2.2rem; } nav { flex-direction: column; gap: 1rem; } }
+    @media (max-width: 768px) { header h1 { font-size: 2.2rem; } nav { flex-direction: column; gap: 1rem; } .project-card { flex-direction: column; } }
 </style>
 </head>
 <body>
 
-<!-- Sticky Navbar -->
+<!-- Navbar -->
 <nav>
     <a href="#summary">Summary</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
 </nav>
 
+<!-- Hero -->
 <header>
+    <img src="https://via.placeholder.com/150" alt="Joseph Assefa">
     <h1>Joseph Assefa</h1>
     <p>Senior Full Stack Developer | Backend Team Lead</p>
-    <p>Email: <a href="mailto:yosephassefa85@gmail.com">yosephassefa85@gmail.com</a> | Phone: +251945948911</p>
-    <p><a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+    <a href="Joseph_Assefa_CV.pdf" download class="btn">Download CV</a>
 </header>
 
 <div class="container">
 
+    <!-- Summary -->
     <section id="summary">
         <h2>Summary</h2>
         <p>Results-driven Backend focused Team Lead and Senior Full Stack Developer with 7+ years of experience working with international clients building enterprise-grade and mission-critical systems. Led teams delivering high-performance systems used daily by thousands of users, ensuring scalability, reliability, and measurable business impact.</p>
     </section>
 
+    <!-- Skills -->
     <section id="skills">
         <h2>Technical Expertise</h2>
         <div class="skills">
@@ -121,6 +147,7 @@
         </div>
     </section>
 
+    <!-- Projects Collapsible -->
     <section id="projects">
         <h2>Projects</h2>
 
@@ -136,18 +163,54 @@
             </div>
         </div>
 
-        <div class="project">
-            <button onclick="toggleProject(this)">
-                MEGP - e-Government Procurement Platform
-                <span class="arrow">&#9654;</span>
-            </button>
-            <div class="project-content">
-                <p>Role: Backend Developer | Malawi Government</p>
-                <p>Built an e-Government Procurement system with 6 modules, integrated across agencies and suppliers. Implemented security, caching, and predictive analytics for procurement trends.</p>
-                <p>Tech Stack: Java 21, Spring Boot, PostgreSQL, Spring Security, Redis, RabbitMQ, React.js, Docker</p>
+        <h3 style="margin-top:2rem;">Other Projects</h3>
+        <div class="project-card">
+            <div class="card">
+                <img src="https://via.placeholder.com/400x180" alt="Project">
+                <div class="card-content">
+                    <h3>e-Government Procurement Platform</h3>
+                    <p>Java, Spring Boot, PostgreSQL, React.js</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/400x180" alt="Project">
+                <div class="card-content">
+                    <h3>Vendorful E-commerce SaaS</h3>
+                    <p>ASP.NET Core, React.js, PostgreSQL</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/400x180" alt="Project">
+                <div class="card-content">
+                    <h3>Road Accident Data Management System</h3>
+                    <p>Angular, ASP.NET Core, PostgreSQL</p>
+                </div>
             </div>
         </div>
+    </section>
 
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"Joseph is an exceptional backend developer and team leader. He consistently delivers high-quality solutions on time." - Client A</p>
+            </div>
+            <div class="testimonial">
+                <p>"His leadership and technical expertise helped us scale our system seamlessly across multiple regions." - Client B</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:yosephassefa85@gmail.com">yosephassefa85@gmail.com</a></p>
+        <p>Phone: +251945948911</p>
+        <div class="contact">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+        </div>
     </section>
 
 </div>
@@ -162,6 +225,5 @@ function toggleProject(button) {
     project.classList.toggle("active");
 }
 </script>
-
 </body>
 </html>
