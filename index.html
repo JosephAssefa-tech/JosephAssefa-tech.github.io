@@ -1,119 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joseph Assefa - Full Stack Developer</title>
-    <style>
-        /* General Styles */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background: #f4f6f8;
-            color: #333;
-            line-height: 1.6;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joseph Assefa - Full Stack Developer</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+    body { background: #f4f6f8; color: #333; line-height: 1.6; scroll-behavior: smooth;}
+    a { color: #007bff; text-decoration: none;}
+    a:hover { text-decoration: underline;}
 
-        /* Header */
-        header {
-            background: #0d6efd;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-        }
+    /* Sticky Navbar */
+    nav {
+        position: sticky;
+        top: 0;
+        background: white;
+        border-bottom: 2px solid #0d6efd;
+        z-index: 100;
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+    nav a {
+        color: #0d6efd;
+        font-weight: bold;
+        padding: 0.5rem;
+        transition: background 0.3s;
+    }
+    nav a:hover { background: #e9ecef; border-radius: 5px; }
 
-        /* Container */
-        .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
+    /* Header */
+    header {
+        background: #0d6efd;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.2rem; }
+    header a { color: white; margin: 0 0.5rem; }
 
-        /* Sections */
-        section {
-            margin-bottom: 2rem;
-            background: white;
-            padding: 1.5rem 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        section h2 {
-            border-bottom: 2px solid #0d6efd;
-            padding-bottom: 0.3rem;
-            margin-bottom: 1rem;
-            color: #0d6efd;
-        }
+    /* Container */
+    .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
 
-        /* Contact Info */
-        .contact {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .contact div {
-            flex: 1;
-        }
+    /* Sections */
+    section { margin-bottom: 2rem; background: white; padding: 1.5rem 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);}
+    section h2 { border-bottom: 2px solid #0d6efd; padding-bottom: 0.3rem; margin-bottom: 1rem; color: #0d6efd; }
 
-        /* Skills / Tech */
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        .skill {
-            background: #0d6efd;
-            color: white;
-            padding: 0.3rem 0.7rem;
-            border-radius: 5px;
-            font-size: 0.9rem;
-        }
+    /* Skills */
+    .skills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .skill { background: #0d6efd; color: white; padding: 0.3rem 0.7rem; border-radius: 5px; font-size: 0.9rem; }
 
-        /* Projects */
-        .project {
-            margin-bottom: 1rem;
-        }
-        .project h3 {
-            color: #333;
-        }
-        .project p {
-            font-size: 0.95rem;
-        }
+    /* Projects */
+    .project { margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+    .project button {
+        width: 100%; text-align: left; background: #f8f9fa; border: none; padding: 1rem;
+        font-size: 1rem; cursor: pointer; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;
+    }
+    .project button:hover { background: #e9ecef; }
+    .project-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; padding: 0 1rem; }
+    .project-content p { padding: 1rem 0; }
+    .arrow { transition: transform 0.3s ease; }
+    .active .arrow { transform: rotate(90deg); }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 1rem;
-            font-size: 0.9rem;
-            color: #555;
-        }
+    /* Footer */
+    footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: #555; }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    /* Responsive */
+    @media (max-width: 768px) { header h1 { font-size: 2rem; } nav { flex-direction: column; gap: 1rem; }}
+</style>
 </head>
 <body>
+
+<!-- Sticky Navbar -->
+<nav>
+    <a href="#summary">Summary</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+</nav>
 
 <header>
     <h1>Joseph Assefa</h1>
@@ -124,41 +89,50 @@
 
 <div class="container">
 
-    <section>
+    <section id="summary">
         <h2>Summary</h2>
         <p>Results-driven Backend focused Team Lead and Senior Full Stack Developer with 7+ years of experience working with international clients building enterprise-grade and mission-critical systems. Led teams delivering high-performance systems used daily by thousands of users, ensuring scalability, reliability, and measurable business impact.</p>
     </section>
 
-    <section>
+    <section id="skills">
         <h2>Technical Expertise</h2>
         <div class="skills">
-            <span class="skill">C#</span>
-            <span class="skill">.Net Core</span>
-            <span class="skill">Java</span>
-            <span class="skill">Spring Boot</span>
-            <span class="skill">Angular</span>
-            <span class="skill">React</span>
-            <span class="skill">SQL Server</span>
-            <span class="skill">PostgreSQL</span>
-            <span class="skill">Azure</span>
-            <span class="skill">AWS</span>
-            <span class="skill">Docker</span>
-            <span class="skill">Kubernetes</span>
+            <span class="skill">C#</span><span class="skill">.Net Core</span><span class="skill">Java</span>
+            <span class="skill">Spring Boot</span><span class="skill">Angular</span><span class="skill">React</span>
+            <span class="skill">SQL Server</span><span class="skill">PostgreSQL</span><span class="skill">Azure</span>
+            <span class="skill">AWS</span><span class="skill">Docker</span><span class="skill">Kubernetes</span>
             <span class="skill">Redis</span>
         </div>
     </section>
 
-    <section>
-        <h2>Experience</h2>
+    <section id="projects">
+        <h2>Projects</h2>
+
         <div class="project">
-            <h3>Backend Team Lead – Custor (Dec 2023 - Present)</h3>
-            <p>Leading backend development for Integrated Vehicle Services Management System, serving 10,000-30,000 daily users, generating $30M+ annual revenue. Mentoring 5 junior developers, optimizing performance with Redis caching and Hangfire, implementing real-time dashboards, and exploring AI/ML for predictive analytics.</p>
+            <button onclick="toggleProject(this)">
+                Integrated Vehicle Services Management System
+                <span class="arrow">&#9654;</span>
+            </button>
+            <div class="project-content">
+                <p>Role: Backend Team Lead / Senior .NET Developer | Custor, Dec 2023 - Present</p>
+                <p>Developed a centralized platform automating operations for 850,000+ vehicles. Managed 10,000-30,000 active daily users, optimized performance with Redis, handled high-volume background jobs with Hangfire, and implemented AI/ML predictive analytics.</p>
+                <p>Tech Stack: ASP.NET Core, EF Core, Angular, Redis, Hangfire, SQL Server, JWT, OAuth 2.0, MediatR, AutoMapper, Azure DevOps</p>
+            </div>
         </div>
+
         <div class="project">
-            <h3>Senior Backend Developer – RecogniseDesign, UK (Jun 2025 - Sep 2025)</h3>
-            <p>Developed and maintained Umbraco-based websites, creating custom content types and templates for dynamic content management. Delivered 10+ client websites with SEO-friendly and responsive design.</p>
+            <button onclick="toggleProject(this)">
+                MEGP - e-Government Procurement Platform
+                <span class="arrow">&#9654;</span>
+            </button>
+            <div class="project-content">
+                <p>Role: Backend Developer | Malawi Government</p>
+                <p>Built an e-Government Procurement system with 6 modules, integrated across agencies and suppliers. Implemented security, caching, and predictive analytics for procurement trends.</p>
+                <p>Tech Stack: Java 21, Spring Boot, PostgreSQL, Spring Security, Redis, RabbitMQ, React.js, Docker</p>
+            </div>
         </div>
-        <!-- You can add more projects here -->
+
+        <!-- Add more projects here -->
     </section>
 
 </div>
@@ -166,6 +140,15 @@
 <footer>
     &copy; 2025 Joseph Assefa. All rights reserved.
 </footer>
+
+<script>
+function toggleProject(button) {
+    const content = button.nextElementSibling;
+    button.classList.toggle("active");
+    if (content.style.maxHeight) { content.style.maxHeight = null; } 
+    else { content.style.maxHeight = content.scrollHeight + "px"; }
+}
+</script>
 
 </body>
 </html>
