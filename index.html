@@ -15,7 +15,7 @@ a { text-decoration: none; color: inherit; }
 nav {
     position: sticky;
     top: 0;
-    background: #0b1d51;
+    background: white !important;
     border-bottom: 2px solid #d4af37;
     z-index: 100;
     padding: 0.6rem 1rem;
@@ -25,7 +25,7 @@ nav {
     flex-wrap: wrap;
 }
 nav a {
-    color: white;
+    color: #3a3a3a;
     font-weight: bold;
     padding: 0.5rem;
 }
@@ -321,7 +321,10 @@ footer {
     background: white !important;
     margin-bottom: 2rem;
 }
+#skills-visualization h2{
+color: #3a3a3a !important;
 
+}
 .section-subtitle {
     text-align: center;
     color: black !important;
@@ -337,8 +340,8 @@ footer {
 .charts-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .chart-card {
@@ -522,7 +525,6 @@ footer {
 <nav>
     <a href="#summary">Summary</a>
     <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
@@ -533,12 +535,12 @@ footer {
     <h1>Yoseph Assefa</h1>
     <p>Senior Full Stack Developer | Backend Team Lead</p>
     <p>Results-driven with 8 years of experience building enterprise-grade and mission-critical systems.</p>
-    <a href="assets/images/cv/Joseph Assefa Senior-Fullstack-developer.pdf"   target="_blank" download class="btn">Download CV</a>
+    <a href="assets/images/cv/Joseph Assefa Senior-Fullstack-developer.pdf"  title="Click to download my CV PDF"  target="_blank" download class="btn">Download CV</a>
 </header>
 
 
 <section class="companies">
-    <h2>Trusted by Companies</h2>
+    <h2>Companies I've Delivered For</h2>
     <div class="logo-slider">
         <div class="logos">
             <img src="assets/images/companies/custor.png" alt="Custor">
@@ -580,7 +582,7 @@ footer {
 
 
 <section id="summary">
-    <h2>Professional Summary</h2>
+    <h2>🏆Professional Summary</h2>
     <p>
         Results-driven Backend-focused Team Lead and Senior Full Stack Developer with 8 years of hands-on experience working with international clients building everything from enterprise-grade applications to mission-critical systems that are actively powering business operations today.
     </p>
@@ -599,8 +601,7 @@ footer {
 
 <!-- Add this after the skills section -->
 <section id="skills-visualization">
-    <h2>Technical Proficiency</h2>
-    <p class="section-subtitle">Visual breakdown of expertise across technology domains</p>
+    <h2>📊Technical Proficiency</h2>
     
     <div class="charts-container">
         <!-- Donut Charts Row -->
@@ -615,7 +616,7 @@ footer {
                         <circle cx="60" cy="60" r="54" fill="none" stroke="#333" stroke-width="12"/>
                         <circle cx="60" cy="60" r="54" fill="none" stroke="#d4af37" stroke-width="12" 
                                 stroke-linecap="round" stroke-dasharray="339" stroke-dashoffset="17"/>
-                        <text x="60" y="65" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">.NET</text>
+                        <text x="60" y="65" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">C#/Java</text>
                     </svg>
                 </div>
                 <div class="chart-details">
@@ -623,6 +624,11 @@ footer {
                     <span>Spring Boot</span>
                     <span>Web API</span>
                     <span>Microservices</span>
+					<span>EF</span>
+			        <span>Spring Data JPA</span>
+					<span>OAuth 2.0</span>
+					<span>JWT</span>
+					
                 </div>
             </div>
             
@@ -634,7 +640,7 @@ footer {
                 <div class="donut-chart" data-percent="88">
                     <svg width="120" height="120" viewBox="0 0 120 120">
                         <circle cx="60" cy="60" r="54" fill="none" stroke="#333" stroke-width="12"/>
-                        <circle cx="60" cy="60" r="54" fill="none" stroke="#0b1d51" stroke-width="12" 
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#95a5a6 " stroke-width="12" 
                                 stroke-linecap="round" stroke-dasharray="339" stroke-dashoffset="41"/>
                         <text x="60" y="65" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">JS</text>
                     </svg>
@@ -644,6 +650,12 @@ footer {
                     <span>React</span>
                     <span>TypeScript</span>
                     <span>Tailwind CSS</span>
+					<span>HTML5</span>
+				    <span>CSS3</span>
+					<span>Material Design</span>
+					<span>Ant Design</span>
+					<span>Syncfusion</span>
+					
                 </div>
             </div>
             
@@ -655,7 +667,7 @@ footer {
                 <div class="donut-chart" data-percent="92">
                     <svg width="120" height="120" viewBox="0 0 120 120">
                         <circle cx="60" cy="60" r="54" fill="none" stroke="#333" stroke-width="12"/>
-                        <circle cx="60" cy="60" r="54" fill="none" stroke="#084c61" stroke-width="12" 
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#e8c4c4 " stroke-width="12" 
                                 stroke-linecap="round" stroke-dasharray="339" stroke-dashoffset="27"/>
                         <text x="60" y="65" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">DB/Ops</text>
                     </svg>
@@ -663,8 +675,12 @@ footer {
                 <div class="chart-details">
                     <span>SQL Server</span>
                     <span>PostgreSQL</span>
-                    <span>Azure/AWS</span>
-                    <span>Docker</span>
+					<span>MongoDB</span>
+					 <span>MySQL</span>
+                    <span>Azure/AWS</span>                
+					<span>IIS</span>
+					<span>Docker</span>
+					<span>Kubernetes</span>
                 </div>
             </div>
         </div>
@@ -674,124 +690,47 @@ footer {
 </section>
 
 <section id="skills">
-    <h2>Technical Expertise</h2>
+    <h2>👨‍💻
+Additional Expertise</h2>
     <div class="skills">
-        <!-- Microsoft Technologies -->
-        <span class="skill">C#</span>
-        <span class="skill">.NET Core (2.1, 3.1, 6.0, 8.0)</span>
-        <span class="skill">ASP.NET</span>
-        <span class="skill">Web API</span>
-        <span class="skill">Azure DevOps</span>
+
         <span class="skill">SignalR</span>
         <span class="skill">Microsoft Identity</span>
         <span class="skill">IdentityServer (Duende)</span>
-        <span class="skill">Entity Framework Core</span>
         <span class="skill">LINQ</span>
         <span class="skill">xUnit</span>
         <span class="skill">Moq</span>
         <span class="skill">BenchmarkDotNet</span>
+		<span class="skill">SQL Server Agent</span>
         <span class="skill">Hangfire</span>
-        <span class="skill">JWT</span>
         <span class="skill">Umbraco</span>
-        <!-- Java Technologies -->
-        <span class="skill">Java 21,17</span>
-        <span class="skill">Spring Boot</span>
-        <span class="skill">Spring Data JPA</span>
+
+
         <span class="skill">Spring Security</span>
-        <span class="skill">OAuth 2.0</span>
         <span class="skill">Keycloak</span>
         <span class="skill">CQRS</span>
         <span class="skill">MapStruct</span>
         <span class="skill">Lombok</span>
         <span class="skill">Apache Kafka</span>
         <span class="skill">Maven</span>
-        <!-- Programming Languages -->
-        <span class="skill">JavaScript</span>
-        <span class="skill">TypeScript</span>
-        <span class="skill">SQL</span>
-        <!-- Frontend -->
-        <span class="skill">Angular</span>
-        <span class="skill">React</span>
-        <span class="skill">HTML5</span>
-        <span class="skill">CSS3</span>
-        <span class="skill">Tailwind CSS</span>
-        <span class="skill">Material Design</span>
-        <!-- RDBMS -->
-        <span class="skill">SQL Server</span>
-        <span class="skill">MySQL</span>
-        <span class="skill">PostgreSQL</span>
-        <!-- Tools & Cloud -->
-        <span class="skill">AWS S3</span>
-        <span class="skill">Azure Functions</span>
-        <span class="skill">Docker</span>
-        <span class="skill">Kubernetes</span>
+		<span class="skill">Thymeleaf</span>
+
+
+        <span class="skill">Highcharts</span>
+		<span class="skill">DevExpress</span>
+
+
         <span class="skill">RabbitMQ</span>
         <span class="skill">Redis</span>
         <span class="skill">WebSocket</span>
-        <span class="skill">Microservices</span>
+
     </div>
 </section>
 
-<section id="experience">
-    <h2>Experience Details</h2>
-    <div class="project">
-        <button onclick="toggleProject(this)">
-            <span>Backend Team Lead (Senior Full Stack Developer) – Custor</span>
-            <span>▶</span>
-        </button>
-        <div class="project-content">
-            <p><strong>Period:</strong> Dec 2023 – Present</p>
-        </div>
-    </div>
-    <div class="project">
-        <button onclick="toggleProject(this)">
-            <span>Senior Backend Developer – RecogniseDesign, United Kingdom (Remote)</span>
-            <span>▶</span>
-        </button>
-        <div class="project-content">
-            <p><strong>Period:</strong> Jun 2025 – Sep 2025</p>
-        </div>
-    </div>
-    <div class="project">
-        <button onclick="toggleProject(this)">
-            <span>Backend/Full Stack Developer – Excellerent Solutions, US (Remote)</span>
-            <span>▶</span>
-        </button>
-        <div class="project-content">
-            <p><strong>Period:</strong> Aug 2021 – Jan 2024</p>
-        </div>
-    </div>
-    <div class="project">
-        <button onclick="toggleProject(this)">
-            <span>Senior Backend Developer – Eptisa Servicios de Ingeniería, S.L Madrid (Remote)</span>
-            <span>▶</span>
-        </button>
-        <div class="project-content">
-            <p><strong>Period:</strong> Feb 2023 – Aug 2023</p>
-        </div>
-    </div>
-    <div class="project">
-        <button onclick="toggleProject(this)">
-            <span>Full Stack Developer – Engage2Excel, US (Remote)</span>
-            <span>▶</span>
-        </button>
-        <div class="project-content">
-            <p><strong>Period:</strong> Aug 2022 – Jun 2023</p>
-        </div>
-    </div>
-    <div class="project">
-        <button onclick="toggleProject(this)">
-            <span>Full Stack Developer – MMCYTECH, New York, Dubai (Remote)</span>
-            <span>▶</span>
-        </button>
-        <div class="project-content">
-            <p><strong>Period:</strong> Aug 2019 – Aug 2021</p>
-        </div>
-    </div>
-</section>
+
 
 <section id="projects">
-    <h2>Project Details</h2>
+    <h2>🎯Project Details</h2>
 
     <div class="project">
         <button onclick="toggleProject(this)">
@@ -960,8 +899,7 @@ footer {
 
 <!-- ====== TESTIMONIALS SECTION ====== -->
 <section id="testimonials">
-    <h2>Colleague Testimonials</h2>
-    <p class="section-subtitle">What teammates and collaborators say about working with me.</p>
+    <h2>📜Colleague Testimonials</h2>
     
     <div class="testimonials-grid">
         
@@ -975,7 +913,8 @@ footer {
             </div>
             <div class="testimonial-author">
                 <div class="author-info">
-                    <strong>Product & Project Manager</strong>
+			     	<strong>Alex Buchanan</strong>
+                    <span>Product & Project Manager</span>
                     <span>Engage2Excel</span>
 					    <a href="https://www.linkedin.com/in/josephassefa/details/recommendations/?detailScreenTabIndex=0" 
        target="_blank" 
@@ -997,7 +936,8 @@ footer {
             </div>
             <div class="testimonial-author">
                 <div class="author-info">
-                    <strong>Senior Software Engineer</strong>
+				    <strong>Nobel Eskinder</strong>
+                    <span>Senior Software Engineer</span>
                     <span>MMCY TECH</span>
 										    <a href="https://www.linkedin.com/in/josephassefa/details/recommendations/?detailScreenTabIndex=0" 
        target="_blank" 
@@ -1012,12 +952,22 @@ footer {
         <!-- Testimonial 3 -->
         <div class="testimonial-card">
             <div class="testimonial-content">
-                <p>"Joseph's transition from .NET expert to Spring Boot specialist was impressive. He not only mastered the new stack quickly but also improved our team's code quality through his rigorous review process. His mentorship elevated our entire team's performance."</p>
+                <p>"
+				I am pleased to recommend Yoseph Assefa, who has worked under my supervision on multiple projects at Excellerent Technology Solutions. He has demonstrated exceptional proficiency in React, Angular, ASP.NET Core, and Node.js, consistently delivering high-quality solutions. His excellent communication skills, strong work ethic, and discipline have fostered a positive and productive team environment. Known for his proactive approach and willingness to go above and beyond, Yoseph is an invaluable asset to any team. I am confident he will excel and make significant contributions wherever he goes.
+I am pleased to recommend Yoseph Assefa, who has worked under my supervision on multiple projects at Excellerent Technology Solutions. He has demonstrated exceptional proficiency in React, Angular, ASP.NET Core, and Node.js, consistently delivering high-quality solutions. His excellent communication skills, strong work ethic, and discipline have fostered a positive and productive team environment. Known for his proactive approach and willingness to go above and beyond, Yoseph is an invaluable asset to any team. I am confident he will excel and make significant contributions wherever he goes.
+"</p>
             </div>
             <div class="testimonial-author">
                 <div class="author-info">
-                    <strong>Junior Full Stack Developer</strong>
-                    <span>Custor Development Team</span>
+				<strong>Nathnael Getahun</strong>
+                    <span>Technical Delivery Manager</span>
+                    <span>Excellerentsolutions</span>
+										    <a href="https://www.linkedin.com/in/josephassefa/details/recommendations/?detailScreenTabIndex=0" 
+       target="_blank" 
+ style="color: #0077b5 !important; display: inline-flex; align-items: center; gap: 0.5rem;"
+       >
+        🔗 View on LinkedIn
+    </a>
                 </div>
             </div>
         </div>
@@ -1025,12 +975,20 @@ footer {
         <!-- Testimonial 4 -->
         <div class="testimonial-card">
             <div class="testimonial-content">
-                <p>"On the ERP multi-tenant project, Joseph designed the tenant isolation strategy that became our gold standard. His focus on security and scalable database design ensured we could onboard large clients without performance degradation. A strategic thinker."</p>
+                <p>"It has been a great opportunity to collaborate with Joseph, who consistently exhibits exceptional technical skills, dedication, and leadership. As a senior developer, Joseph has been instrumental in spearheading key projects and mentoring team members, significantly contributing to our success. His problem-solving abilities are remarkable; he has a unique talent for breaking down complex challenges and devising efficient, innovative solutions. Whether it's optimizing our backend systems or creating intuitive frontend interfaces, Joseph consistently delivers top-notch work that exceeds expectations.Beyond his technical expertise, Joseph is an exemplary team player and leader. He fosters a collaborative environment, always eager to share knowledge and support his colleagues' professional growth. His positive attitude, strong communication skills, and willingness to go the extra mile make him a highly respected and valued member of our team. I am confident that Joseph will continue to excel in any future endeavors, and I highly recommend him for any opportunity that seeks a talented and driven senior developer.
+				His contributions have been invaluable to our team, and I look forward to witnessing his continued success."</p>
             </div>
             <div class="testimonial-author">
                 <div class="author-info">
-                    <strong>Product Owner</strong>
-                    <span>Multi-tenant ERP Project</span>
+				<strong>Bereket Tewelde </strong>
+                    <span>Product Owner</span>
+                    <span>Team Lead</span>
+										    <a href="https://www.linkedin.com/in/josephassefa/details/recommendations/?detailScreenTabIndex=0" 
+       target="_blank" 
+ style="color: #0077b5 !important; display: inline-flex; align-items: center; gap: 0.5rem;"
+       >
+        🔗 View on LinkedIn
+    </a>
                 </div>
             </div>
         </div>
@@ -1045,19 +1003,22 @@ footer {
 
 
 <section id="education">
-    <h2>Education</h2>
+
+    <h2><span style="font-size: 2rem; filter: sepia(1) saturate(5) hue-rotate(0deg) brightness(1.2);">🎓</span>Education</h2>
     <p><strong>B.Sc. in Software Engineering</strong></p>
-    <p>College of Computing and Informatics (2015 – 2018)</p>
+    <p>College of Computing and Informatics (2015 – 2018)</p><br/>
+	<p><strong>Certficate</strong></p>
+    <p>Oracle Database Administration (2019)</p>
 </section>
 
 <section id="contact">
-    <h2>Contact</h2>
+    <h2>📧Contact</h2>
     <p><strong>Email:</strong> <a href="mailto:yosephassefa85@gmail.com">yosephassefa85@gmail.com</a></p>
     <p><strong>Phone:</strong> +251 945 948 911</p>
     <div class="contact-links">
         <!-- Replace # with your actual profile URLs -->
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/josephassefa/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/JosephAssefa-tech" target="_blank">GitHub</a>
     </div>
 </section>
 
