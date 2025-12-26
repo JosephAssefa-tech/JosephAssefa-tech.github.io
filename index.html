@@ -211,11 +211,11 @@ section h2 {
     margin-top: 1rem;
 }
 .tech-tag {
-    background: #0b1d51;
-    color: #d4af37;
+    background:  #f8fafc;
+    color: #0f172a;
     padding: 0.3rem 0.7rem;
     border-radius: 15px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
@@ -360,7 +360,7 @@ color: #3a3a3a !important;
 
 .chart-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 1.5rem;
 }
@@ -369,6 +369,7 @@ color: #3a3a3a !important;
     color: #fff;
     font-size: 1.2rem;
     margin: 0;
+	
 }
 
 .chart-percentage {
@@ -404,7 +405,7 @@ color: #3a3a3a !important;
 
 .chart-details span {
     background: rgba(212, 175, 55, 0.1);
-    color: #d4af37;
+    color: white;
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
     font-size: 0.85rem;
@@ -509,6 +510,17 @@ color: #3a3a3a !important;
         width: 100%;
     }
 }
+.list-row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap; /* responsive */
+}
+
+.list-row ul {
+    flex: 1;
+    margin: 0;
+    padding-left: 1.2rem;
+}
 
 
 @media (max-width: 768px) {
@@ -609,9 +621,9 @@ color: #3a3a3a !important;
             <div class="chart-card">
                 <div class="chart-header">
                     <h3>Backend Development</h3>
-                    <div class="chart-percentage">95%</div>
+                  
                 </div>
-                <div class="donut-chart" data-percent="95">
+                <div class="donut-chart" data-percent="94">
                     <svg width="120" height="120" viewBox="0 0 120 120">
                         <circle cx="60" cy="60" r="54" fill="none" stroke="#333" stroke-width="12"/>
                         <circle cx="60" cy="60" r="54" fill="none" stroke="#d4af37" stroke-width="12" 
@@ -623,6 +635,7 @@ color: #3a3a3a !important;
                     <span>.NET Core</span>
                     <span>Spring Boot</span>
                     <span>Web API</span>
+					<span>Modular Monolith</span>
                     <span>Microservices</span>
 					<span>EF</span>
 			        <span>Spring Data JPA</span>
@@ -635,9 +648,9 @@ color: #3a3a3a !important;
             <div class="chart-card">
                 <div class="chart-header">
                     <h3>Frontend Development</h3>
-                    <div class="chart-percentage">88%</div>
+                  
                 </div>
-                <div class="donut-chart" data-percent="88">
+                <div class="donut-chart" data-percent="90">
                     <svg width="120" height="120" viewBox="0 0 120 120">
                         <circle cx="60" cy="60" r="54" fill="none" stroke="#333" stroke-width="12"/>
                         <circle cx="60" cy="60" r="54" fill="none" stroke="#95a5a6 " stroke-width="12" 
@@ -662,7 +675,7 @@ color: #3a3a3a !important;
             <div class="chart-card">
                 <div class="chart-header">
                     <h3>Database & DevOps</h3>
-                    <div class="chart-percentage">92%</div>
+                 
                 </div>
                 <div class="donut-chart" data-percent="92">
                     <svg width="120" height="120" viewBox="0 0 120 120">
@@ -719,7 +732,7 @@ Additional Expertise</h2>
         <span class="skill">Highcharts</span>
 		<span class="skill">DevExpress</span>
 
-
+        <span class="skill">Apache Kafka</span>
         <span class="skill">RabbitMQ</span>
         <span class="skill">Redis</span>
         <span class="skill">WebSocket</span>
@@ -755,6 +768,77 @@ Additional Expertise</h2>
             </div>
         </div>
     </div>
+	
+	
+	
+	    <div class="project">
+        <button onclick="toggleProject(this)">
+            Projetsolaire/Hardware marketplace
+            <span>▶</span>
+        </button>
+        <div class="project-content">
+            <p><strong>Role:</strong> Backend - SpringBoot Developer</p>
+            <p><strong>Period:</strong> nov 2025 – Present</p>
+            <p>projetsolaire wants to connect Suppliers with stakeholders carrying out solar projects</p>
+			<p>To reduce fragmentation in the hardware marketplace and reduce time procuring and ordering hardware we want to offer a inclusive hardware experience that is seemless from the planning and management of hardware</p>
+           
+
+		   <p><strong>Key Responsibilities & Achievements:</strong></p>
+		  
+		   <div class="list-row">
+            <ul> <strong>Supplier portal</strong>
+                <li>Manage their product listings</li>
+                <li>Respond to their RFQ’s</li>
+                <li>Manage their orders</li>
+                <li>Manage their subusers</li>
+                <li>Manage their deliveries</li>
+                <li>Pool offers</li>
+            </ul>
+			
+			        <ul>
+            <strong>Installer portal</strong>
+            <li>Create request for quotes to suppliers</li>
+            <li>Manage their hardware on the platform</li>
+            <li>Can participate in pool / group buying offers</li>
+
+        </ul>
+		
+					        <ul>
+            <strong>Householder portal</strong>
+            <li>Can only directly purchase hardware via checkout</li>
+
+        </ul>
+			</div>
+            <div class="tech-stack">
+                <span class="tech-tag">ASP.NET Core 8.0</span><span class="tech-tag">Entity Framework 8</span><span class="tech-tag">CQRS</span><span class="tech-tag">MediatR</span><span class="tech-tag">Angular 18</span><span class="tech-tag">SQL Server 2022</span><span class="tech-tag">Redis</span><span class="tech-tag">Azure DevOps</span><span class="tech-tag">Docker</span><span class="tech-tag">JWT</span>
+            </div>
+        </div>
+    </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
     <div class="project">
         <button onclick="toggleProject(this)">
