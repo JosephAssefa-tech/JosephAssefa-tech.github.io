@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joseph Assefa - Senior Full Stack Developer</title>
+
+<style>
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body {
+ background: #F5F5F5; color: #f0f0f0; line-height: 1.6; scroll-behavior: smooth; }
+a { text-decoration: none; color: inherit; }
+
+nav {
+    position: sticky;
+    top: 0;
+    background: white !important;
+    border-bottom: 2px solid #d4af37;
+    z-index: 100;
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+nav a {
+    color: #3a3a3a;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+nav a:hover {
+    background: rgba(212,175,55,0.2);
+    border-radius: 5px;
+}
+
+/* Hero */
+header {
+    background: linear-gradient(135deg, #0b1d51, #084c61);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #d4af37;
+    object-fit: cover;
+}
+header h1 { font-size: 3rem; margin-top: 0rem; }
+header p { font-size: 1.2rem; margin: 0.5rem 0; }
+
+.btn {
+    display: inline-block;
+    background: #d4af37;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+.btn:hover { transform: scale(1.05); }
+
+.companies {
+    background: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+.companies h2 {
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+.logo-slider { overflow: hidden; }
+.logos {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    animation: slideLogos 25s linear infinite;
+}
+.logos img {
+    height: 60px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+.logos img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    opacity: 1;
+}
+.logo-slider:hover .logos { animation-play-state: paused; }
+
+@keyframes slideLogos {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+
+.metrics {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+.metrics div {
+    text-align: center;
+}
+.metrics strong {
+    font-size: 2rem;
+    color: #d4af37;
+}
+.metrics span {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+
+section {
+    background: #2b2b2b;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+section h2 {
+    color: white;
+    border-bottom: 2px solid #d4af37;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+.skill {
+    background: white;
+    color: #1f1f1f;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+
+.project {
+    border: 1px solid #444;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+.project button {
+    width: 100%;
+    background: #3a3a3a;
+    border: none;
+    padding: 1rem;
+    color: #fff;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+.project button:hover {
+    background: #4a4a4a;
+}
+.project button span {
+    transition: transform 0.3s;
+}
+.project.active button span {
+    transform: rotate(90deg);
+}
+.project-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    transition: max-height 0.4s ease;
+}
+.project.active .project-content {
+    max-height: 1500px; /* Increased to accommodate detailed content */
+    padding: 1rem;
+}
+.project-content p, .project-content ul {
+    margin-bottom: 0.8rem;
+}
+.project-content ul {
+    padding-left: 1.2rem;
+}
+.project-content li {
+    margin-bottom: 0.4rem;
+}
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+.tech-tag {
+    background:  #f8fafc;
+    color: #0f172a;
+    padding: 0.3rem 0.7rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.contact-links a {
+    display: inline-block;
+    background: #d4af37;
+    color: #1f1f1f;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+.contact-links a:hover {
+    transform: scale(1.05);
+    background: #e6c052;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: #aaa;
+    border-top: 1px solid #444;
+}
+#testimonials h2{
+
+   color: black !important;
+}
+#testimonials{
+  background-color: white !important; /* Your request */
+    color: #1f1f1f !important; /* Crucial: Change text color to dark */
+}
+
+#testimonials .section-subtitle {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.testimonial-card {
+    background: #3a3a3a;
+    border-radius: 10px;
+    padding: 1.8rem;
+    border-left: 4px solid #d4af37;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.testimonial-content {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    line-height: 1.7;
+    color: #f0f0f0;
+}
+
+.testimonial-author {
+    border-top: 1px solid #555;
+    padding-top: 1.2rem;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-info strong {
+    color: #d4af37;
+    font-size: 1.1rem;
+}
+
+.author-info span {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+}
+/* Skills Visualization Styles */
+#skills-visualization {
+    background: white !important;
+    margin-bottom: 2rem;
+}
+#skills-visualization h2{
+color: #3a3a3a !important;
+
+}
+.section-subtitle {
+    text-align: center;
+    color: black !important;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.charts-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.charts-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.chart-card {
+    background: #3a3a3a;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #444;
+}
+
+.chart-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.chart-header h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0;
+	
+}
+
+.chart-percentage {
+    background: #d4af37;
+    color: #1f1f1f;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.donut-chart {
+    margin: 1rem auto;
+    position: relative;
+}
+
+.donut-chart svg {
+    display: block;
+    margin: 0 auto;
+}
+
+.donut-chart text {
+    fill: #fff;
+}
+
+.chart-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.chart-details span {
+    background: rgba(212, 175, 55, 0.1);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Detailed Skills Bars */
+.detailed-skills {
+    background: #3a3a3a;
+    border-radius: 10px;
+    padding: 2rem;
+    border: 1px solid #444;
+}
+
+.detailed-skills h3 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.skill-bars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category h4 {
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.skill-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.skill-bar span:first-child {
+    min-width: 140px;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.bar-container {
+    flex-grow: 1;
+    height: 10px;
+    background: #555;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0b1d51, #d4af37);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: fillBar 1.5s ease-out forwards;
+    animation-delay: calc(var(--index, 0) * 0.1s);
+}
+
+@keyframes fillBar {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+.skill-percent {
+    min-width: 40px;
+    text-align: right;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .charts-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-bars {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .skill-bar span:first-child {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .bar-container {
+        width: 100%;
+    }
+}
+.list-row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap; /* responsive */
+}
+
+.list-row ul {
+    flex: 1;
+    margin: 0;
+    padding-left: 1.2rem;
+}
+/* Video Styles */
+.video-demo {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid #d4af37;
+}
+
+.video-demo h4 {
+    color: #d4af37;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #000;
+}
+
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+video:hover {
+    transform: scale(1.01);
+}
+
+.video-caption {
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    color: #aaa;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Make video responsive */
+@media (max-width: 768px) {
+    .video-demo {
+        padding: 1rem;
+    }
+    
+    video {
+        max-height: 50vh;
+    }
+}
+.video-link {
+    display: inline-block;
+    margin: 0.75rem 0;
+    padding: 0.6rem 1rem;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.video-link:hover {
+    background-color: #1e40af;
+}
+
+
+@media (max-width: 768px) {
+    .metrics { flex-direction: column; gap: 1.5rem; }
+    header h1 { font-size: 2.2rem; }
+    nav { gap: 1rem; }
+    .logos img { height: 40px; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#summary">Summary</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<header>
+    <!-- <img src="assets/images/profile.jpg" alt="Joseph Assefa"> -->
+    <h1>Yoseph Assefa</h1>
+    <p>Senior Full Stack Developer | Backend Team Lead</p>
+    <p>Results-driven with 8 years of experience building enterprise-grade and mission-critical systems.</p>
+    <a href="assets/images/cv/Joseph Assefa Senior-Fullstack-developer.pdf"  title="Click to download my CV PDF"  target="_blank" download class="btn">Download CV</a>
+</header>
+
+
+<section class="companies">
+    <h2>Companies I've Delivered For</h2>
+    <div class="logo-slider">
+        <div class="logos">
+            <img src="assets/images/companies/custor.png" alt="Custor">
+            <img src="assets/images/companies/excellerentsolutions.png" alt="Excellerent Solutions">
+            <img src="assets/images/companies/e2e.png" alt="Engage2Excel">
+            <img src="assets/images/companies/mmcytech.png" alt="MMCYTECH">
+            <img src="assets/images/companies/depalma-studio.jpg" alt="Depalma Studio">
+            <img src="assets/images/companies/altour.webp" alt="Altour">
+            <img src="assets/images/companies/macdonalds.jpg" alt="McDonald's">
+            <img src="assets/images/companies/projetsolaire.png" alt="Projet Solaire">
+            <img src="assets/images/companies/perago.webp" alt="Perago">
+            <!-- duplicate for seamless loop -->
+            <img src="assets/images/companies/custor.png" alt="Custor">
+            <img src="assets/images/companies/excellerentsolutions.png" alt="Excellerent Solutions">
+            <img src="assets/images/companies/e2e.png" alt="Engage2Excel">
+            <img src="assets/images/companies/mmcytech.png" alt="MMCYTECH">
+            <img src="assets/images/companies/depalma-studio.jpg" alt="Depalma Studio">
+            <img src="assets/images/companies/altour.webp" alt="Altour">
+            <img src="assets/images/companies/macdonalds.jpg" alt="McDonald's">
+            <img src="assets/images/companies/projetsolaire.png" alt="Projet Solaire">
+            <img src="assets/images/companies/perago.webp" alt="Perago">
+        </div>
+    </div>
+
+    <div class="metrics">
+       <!--  <div><strong>8</strong><span>Years Experience</span></div> -->
+        <div><strong>970K+</strong><span>Vehicles Managed</span></div>
+        <div><strong>30K+</strong><span>Active Daily Users</span></div>
+        <div><strong>$35M+</strong><span>Annual System Revenue</span></div>
+   
+        <div><strong>85+</strong><span>Event Based Web App</span></div>
+    </div>
+</section>
+
+<div class="container">
+
+
+
+
+
+<section id="summary">
+    <h2>🏆Professional Summary</h2>
+    <p>
+        Results-driven Backend-focused Team Lead and Senior Full Stack Developer with 8 years of hands-on experience working with international clients building everything from enterprise-grade applications to mission-critical systems that are actively powering business operations today.
+    </p>
+    <p>
+        My track record extends beyond a CV. I’ve led teams that delivered high-performance systems used daily by thousands of end users across multiple regions, ensuring scalability, reliability, and measurable business impact.
+    </p>
+    <ul>
+        <li>Expertise in modern technologies. Delivered 85+ web-based projects and managed databases with over 4,000,000 records.</li>
+        <li>Developed systems processing more than $35,000,000 USD annually, demonstrating strong capabilities in handling complex financial operations.</li>
+        <li>Successfully migrated more than 970,000 legacy system records to newly developed system databases.</li>
+        <li>Successfully handled end-to-end registration for 133,000+ attendees, covering hotel reservations and flight bookings.</li>
+        <li>Proficient in C#, .Net Core, Java, Spring Boot, MVC, Web API, Angular, React, SQL Server, PostgreSQL, Oracle, Azure, and AWS.</li>
+        <li>Experienced in mentoring and training junior developers, significantly improving their skills and contributing to successful project outcomes.</li>
+    </ul>
+</section>
+
+<!-- Add this after the skills section -->
+<section id="skills-visualization">
+    <h2>📊Technical Proficiency</h2>
+    
+    <div class="charts-container">
+        <!-- Donut Charts Row -->
+        <div class="charts-row">
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3>Backend Development</h3>
+                  
+                </div>
+                <div class="donut-chart" data-percent="94">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#333" stroke-width="12"/>
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#d4af37" stroke-width="12" 
+                                stroke-linecap="round" stroke-dasharray="339" stroke-dashoffset="17"/>
+                        <text x="60" y="65" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">C#/Java</text>
+                    </svg>
+                </div>
+                <div class="chart-details">
+                    <span>.NET Core</span>
+                    <span>Spring Boot</span>
+                    <span>Web API</span>
+					<span>Modular Monolith</span>
+                    <span>Microservices</span>
+					<span>EF</span>
+			        <span>Spring Data JPA</span>
+					<span>OAuth 2.0</span>
+					<span>JWT</span>
+					
+                </div>
+            </div>
+            
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3>Frontend Development</h3>
+                  
+                </div>
+                <div class="donut-chart" data-percent="90">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#333" stroke-width="12"/>
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#95a5a6 " stroke-width="12" 
+                                stroke-linecap="round" stroke-dasharray="339" stroke-dashoffset="41"/>
+                        <text x="60" y="65" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">JS</text>
+                    </svg>
+                </div>
+                <div class="chart-details">
+                    <span>Angular</span>
+                    <span>React</span>
+                    <span>TypeScript</span>
+                    <span>Tailwind CSS</span>
+					<span>HTML5</span>
+				    <span>CSS3</span>
+					<span>Material Design</span>
+					<span>Ant Design</span>
+					<span>Syncfusion</span>
+					
+                </div>
+            </div>
+            
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3>Database & DevOps</h3>
+                 
+                </div>
+                <div class="donut-chart" data-percent="92">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#333" stroke-width="12"/>
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#e8c4c4 " stroke-width="12" 
+                                stroke-linecap="round" stroke-dasharray="339" stroke-dashoffset="27"/>
+                        <text x="60" y="65" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">DB/Ops</text>
+                    </svg>
+                </div>
+                <div class="chart-details">
+                    <span>SQL Server</span>
+                    <span>PostgreSQL</span>
+					<span>MongoDB</span>
+					 <span>MySQL</span>
+                    <span>Azure/AWS</span>                
+					<span>IIS</span>
+					<span>Docker</span>
+					<span>Kubernetes</span>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</section>
+
+<section id="skills">
+    <h2>👨‍💻
+Additional Expertise</h2>
+    <div class="skills">
+
+        <span class="skill">SignalR</span>
+        <span class="skill">Microsoft Identity</span>
+        <span class="skill">IdentityServer (Duende)</span>
+        <span class="skill">LINQ</span>
+        <span class="skill">xUnit</span>
+        <span class="skill">Moq</span>
+        <span class="skill">BenchmarkDotNet</span>
+		<span class="skill">SQL Server Agent</span>
+        <span class="skill">Hangfire</span>
+        <span class="skill">Umbraco</span>
+
+
+        <span class="skill">Spring Security</span>
+        <span class="skill">Keycloak</span>
+        <span class="skill">CQRS</span>
+        <span class="skill">MapStruct</span>
+        <span class="skill">Lombok</span>
+        <span class="skill">Apache Kafka</span>
+        <span class="skill">Maven</span>
+		<span class="skill">Thymeleaf</span>
+
+
+        <span class="skill">Highcharts</span>
+		<span class="skill">DevExpress</span>
+
+        <span class="skill">Apache Kafka</span>
+        <span class="skill">RabbitMQ</span>
+        <span class="skill">Redis</span>
+        <span class="skill">WebSocket</span>
+
+    </div>
+</section>
+
+
+
+<section id="projects">
+    <h2>🎯Project Details</h2>
+
+    <div class="project">
+        <button onclick="toggleProject(this)">
+            Integrated Vehicle Services Management System – City Government of Addis Ababa
+            <span>▶</span>
+        </button>
+        <div class="project-content">
+            <p><strong>Role:</strong> Senior Backend .NET Developer / Team Lead</p>
+            <p><strong>Period:</strong> Dec 2023 – Present</p>
+            <p>A centralized digital platform to streamline vehicle-related services (registration, inspection, licensing, taxation) across the city, integrating multiple government and private sector processes.</p>
+            <p><strong>Key Responsibilities & Achievements:</strong></p>
+            <ul>
+                <li>Developing a system automating operations for over 850,000 vehicles.</li>
+                <li>Managing an application with 10,000 - 30,000 active daily users.</li>
+                <li>Contributing to over $35 million in annual revenue by enhancing system efficiency.</li>
+                <li>Conducting code reviews and mentoring 5 junior developers.</li>
+                <li>Optimized performance with Redis caching and managed high-volume processes with Hangfire.</li>
+                <li>Explored AI/ML integration for predictive analytics and implemented real-time dashboards.</li>
+            </ul>
+            <div class="tech-stack">
+                <span class="tech-tag">ASP.NET Core 8.0</span><span class="tech-tag">Entity Framework 8</span><span class="tech-tag">CQRS</span><span class="tech-tag">MediatR</span><span class="tech-tag">Angular 18</span><span class="tech-tag">SQL Server 2022</span><span class="tech-tag">Redis</span><span class="tech-tag">Azure DevOps</span><span class="tech-tag">Docker</span><span class="tech-tag">JWT</span>
+            </div>
+			            <div class="video-demo">
+                <h4>📹 System Demo</h4>
+<div class="video-container">
+    <iframe
+        src="https://jumpshare.com/share/rtDKuV0ubxVkPIWYraut?b=n3wVUxztBiOR9Lt3GSBw"
+        width="100%"
+        height="360"
+        frameborder="0"
+        allowfullscreen
+        loading="lazy"
+        style="border-radius: 8px;"
+    ></iframe>
+    <p class="video-caption">Demonstration of IVSMS.</p>
+</div>
+
+
+            </div>
+        </div>
+    </div>
+	
+	
+	
+	    <div class="project">
+        <button onclick="toggleProject(this)">
+            Projetsolaire/Hardware marketplace
+            <span>▶</span>
+        </button>
+        <div class="project-content">
+            <p><strong>Role:</strong> Backend - SpringBoot Developer</p>
+            <p><strong>Period:</strong> nov 2025 – Present</p>
+            <p>projetsolaire wants to connect Suppliers with stakeholders carrying out solar projects</p>
+			<p>To reduce fragmentation in the hardware marketplace and reduce time procuring and ordering hardware we want to offer a inclusive hardware experience that is seemless from the planning and management of hardware</p>
+           
+
+		   <p><strong>Key Responsibilities & Achievements:</strong></p>
+		  
+		   <div class="list-row">
+            <ul> <strong>Supplier portal</strong>
+                <li>Manage their product listings</li>
+                <li>Respond to their RFQ’s</li>
+                <li>Manage their orders</li>
+                <li>Manage their subusers</li>
+                <li>Manage their deliveries</li>
+                <li>Pool offers</li>
+            </ul>
+			
+			        <ul>
+            <strong>Installer portal</strong>
+            <li>Create request for quotes to suppliers</li>
+            <li>Manage their hardware on the platform</li>
+            <li>Can participate in pool / group buying offers</li>
+
+        </ul>
+		
+					        <ul>
+            <strong>Householder portal</strong>
+            <li>Can only directly purchase hardware via checkout</li>
+
+        </ul>
+
+			</div>					<a href="https://projetsolaire.com/"
+   target="_blank"
+   style="color: #4da3ff; text-decoration: underline;">
+ projetsolaire.com
+</a>
+            <div class="tech-stack">
+                <span class="tech-tag">Java 21</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Spring Data JPA</span>
+				<span class="tech-tag">MongoDB</span><span class="tech-tag">Spring Security</span><span class="tech-tag"> OAuth 2.0</span><span class="tech-tag">JWT</span><span class="tech-tag">Vue</span>
+				<span class="tech-tag">Springdoc OpenAPI</span><span class="tech-tag">MapStruct</span><span class="tech-tag">Thymeleaf</span>
+				<span class="tech-tag">Lombok</span><span class="tech-tag">Kafka</span><span class="tech-tag">Maven</span><span class="tech-tag">Docker</span>
+				<span class="tech-tag">Git</span><span class="tech-tag">Agile</span><span class="tech-tag">Stripe</span><span class="tech-tag">Twilio SendGrid</span>
+            </div>
+			
+			            <div class="video-demo">
+                <h4>📹 System Demo</h4>
+<div class="video-container">
+    <iframe
+        src="https://jumpshare.com/share/oebSMhLuO1ut3g0ot1a3?b=n3wVUxztBiOR9Lt3GSBw"
+        width="100%"
+        height="360"
+        frameborder="0"
+        allowfullscreen
+        loading="lazy"
+        style="border-radius: 8px;"
+    ></iframe>
+    <p class="video-caption">Demonstration of Projetsolaire.</p>
+</div>
+
+
+            </div>
+        </div>
+    </div>
+	
+	
+	
+	
+	
+
+
+    <div class="project">
+        <button onclick="toggleProject(this)">
+            Malawi Electronic Government Procurement (MEGP)
+            <span>▶</span>
+        </button>
+        <div class="project-content">
+            <p><strong>Role:</strong> Senior Backend Developer</p>
+            <p>Developed a robust e-Government Procurement platform to modernize national procurement processes, enhancing transparency and efficiency with 6 integrated modules.</p>
+            <p><strong>Key Contributions:</strong></p>
+            <ul>
+                <li>Built backend services using Java 21 and Spring Boot for tender management, registration, and planning.</li>
+                <li>Utilized Spring Data JPA with PostgreSQL for large-scale data handling.</li>
+                <li>Implemented Spring Security for role-based access control.</li>
+                <li>Integrated Redis caching to improve performance.</li>
+                <li>Explored AI/ML integration for predictive analytics.</li>
+            </ul>
+            <div class="tech-stack">
+                <span class="tech-tag">Java 21</span><span class="tech-tag">Spring Boot 3.3</span><span class="tech-tag">Spring Security</span><span class="tech-tag"> OAuth 2.0</span><span class="tech-tag">JWT</span>
+				<span class="tech-tag">PostgreSQL</span><span class="tech-tag">Git</span><span class="tech-tag">Docker</span><span class="tech-tag">React.js</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="project">
+        <button onclick="toggleProject(this)">
+            Umbraco CMS Projects – Recognise Design
+            <span>▶</span>
+        </button>
+        <div class="project-content">
+            <p><strong>Role:</strong> Senior .NET Developer (Contract)</p>
+            <p><strong>Period:</strong> Jun 2025 – Sep 2025</p>
+            <p>Developed and maintained websites and portals using Umbraco CMS on .NET Core, creating custom content types and workflows.</p>
+            <p><strong>Responsibilities:</strong></p>
+            <ul>
+                <li>Delivered and supported over 10 UK client websites.</li>
+                <li>Implemented custom themes and SEO-friendly code.</li>
+                <li>Conducted code reviews to ensure quality and standards.</li>
+                <li>Built fast, responsive, and scalable websites (e.g., columbusitaly, columbusuk).</li>
+            </ul>
+						<a href="https://www.columbusassicurazioni.it/"
+   target="_blank"
+   style="color: #4da3ff; text-decoration: underline;">
+  columbus-italy
+</a><br/>
+			<a href="https://columbus-uk-fhagbubwbshtfhgw.a01.azurefd.net/homepage/"
+   target="_blank"
+   style="color: #4da3ff; text-decoration: underline;">
+  columbus-uk
+</a>
+
+            <div class="tech-stack">
+                <span class="tech-tag">Umbraco</span><span class="tech-tag">.NET Core</span><span class="tech-tag">Git</span>
+				<span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span>
+				<span class="tech-tag">SQLite</span><span class="tech-tag">Azure DevOps</span><span class="tech-tag">Jira</span><span class="tech-tag">Agile</span>
+            </div>
+			            <div class="video-demo">
+                <h4>📹 System Demo</h4>
+<div class="video-container">
+    <iframe
+        src="https://jumpshare.com/share/9YvyikA6dnWCXCnStCrV?b=n3wVUxztBiOR9Lt3GSBw"
+        width="100%"
+        height="360"
+        frameborder="0"
+        allowfullscreen
+        loading="lazy"
+        style="border-radius: 8px;"
+    ></iframe>
+    <p class="video-caption">Demonstration of Columbus.</p>
+</div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="project">
+        <button onclick="toggleProject(this)">
+            Multi-tenant ERP Application – Private Client
+            <span>▶</span>
+        </button>
+        <div class="project-content">
+            <p><strong>Role:</strong> Senior Java/Spring Boot Backend Developer / Product Builder</p>
+            <p>
+			Developing a multi-tenant ERP application designed to support multiple clients with isolated data environments while
+providing centralized management. The system streamlines core business operations including inventory, sales, finance,
+and HR, with modular architecture for scalability, secure multi-tenant access, and real-time reporting.
+			
+			</p>
+            <p><strong>Responsibilities:</strong></p>
+            <ul>
+                <li>Designed modular, scalable and maintainable multi-tenant architecture with role based access control and
+tenant isolation.</li>
+                <li>Implementing customizable configurations for each tenant, including form design capablities, styles, logo, etc …
+for tenant specific entities.</li>
+                <li>Implementing efficient API and SQL Server database structures to handle multiple tenant’s data securely.</li>
+                <li>Developed real-time analytics using Highcharts and modular ERP features.</li>
+				<li>Building modular ERP features including employee management, inventory, finance, invoicing and notification.
+Reviewing pull request and giving constructive feedback
+</li>
+            </ul>
+            <div class="tech-stack">
+                <span class="tech-tag">Java 21</span><span class="tech-tag">Spring Boot 3.3</span><span class="tech-tag">Spring Security</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Keycloak</span><span class="tech-tag">Angular 18+</span><span class="tech-tag">Highcharts</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="project">
+        <button onclick="toggleProject(this)">
+            Road Accident Data Management System (RADMS) – Eptisa
+            <span>▶</span>
+        </button>
+        <div class="project-content">
+            <p><strong>Role:</strong> Senior Backend Developer</p>
+            <p><strong>Period:</strong> Feb 2023 – Aug 2023</p>
+            <p>
+			RADMS is conduct a nationwide accident data collation, digitizing the paper-based accident records and mapping the
+accident locations based on the available geographical details for the last six years.
+This database will be hosted at the National Road Safety Council Office (NRSCO) and will be available for the usage of other
+stakeholders at national level to plan, design, develop and implement road safety interventions, so as to improve the road
+safety environment throughout the Federal Democratic Republic of Ethiopia.
+			
+			</p>
+            <p><strong>Responsibilities:</strong></p>
+            <ul>
+                <li>Digitized and migrated approximately 90,000 accident records into the database.</li>
+                <li>Mapped records on an ArcGIS platform and performed statistical analysis.</li>
+                <li>Designed, developed, and maintained RESTful APIs for the system.</li>
+				    <li>Writing clean and maintainable code while adhering to best practices.</li>
+					 <li>End-to-end software design and development
+.</li>
+            </ul>
+            
+            <!-- Video Section -->
+            <div class="video-demo">
+                <h4>📹 System Demo</h4>
+                <div class="video-container">
+                    <video controls poster="assets/videos/radms-thumbnail.jpg" style="width: 100%; border-radius: 8px; margin: 1rem 0;">
+                        <source src="demos/Performance-demo (1).mp4" type="video/mp4">
+                        <source src="demos/Performance-demo (1).mp4" type="video/webm">
+                        Your browser does not support the video tag. You can 
+                        <a href="assets/videos/Performance-demo (1).mp4" download>download the video</a> instead.
+                    </video>
+                    <p class="video-caption">Demonstration of the Road Accident Data Management System showing data visualization and mapping features.</p>
+                </div>
+            </div>
+            
+            <div class="tech-stack">
+                <span class="tech-tag">ASP.NET Core</span><span class="tech-tag">Entity Framework</span><span class="tech-tag">Angular</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">CQRS</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Projects (Collapsed for brevity in example) -->
+    <div class="project">
+        <button onclick="toggleProject(this)">
+            Vendorful (E-commerce SaaS) – Depalma Studios
+            <span>▶</span>
+        </button>
+        <div class="project-content">
+            <p><strong>Role:</strong> Full Stack Developer</p>
+            <p>which is an e-commerce web-based application, That offers
+SaaS solutions for both sides of b2b relationships.</p>
+            <p><strong>Responsibilities:</strong></p>
+            <ul>
+                <li>Designed and implemented user-friendly interfaces for the frontend, ensuring a smooth shopping experience.</li>
+                <li>Built and maintained server-side logic, APIs, and databases to support the platform.
+</li>
+                <li>Integrated third-party payment gateways such as Stripe to facilitate secure transactions..</li>
+				    <li>Troubleshoot and debug issues across the full stack, from front-end interfaces to back-end systems, to ensure high
+performance and reliability.</li>
+
+.</li>
+            </ul>
+            <div class="tech-stack">
+                <span class="tech-tag">React.js</span><span class="tech-tag">RTK</span><span class="tech-tag">Microsoft Identity</span><span class="tech-tag">JWT</span>
+				<span class="tech-tag">ASP.NET Core</span><span class="tech-tag">Tailwindcss</span>
+				<span class="tech-tag">PostgreSQL</span><span class="tech-tag">AzureDevOps</span><span class="tech-tag">SendGrid</span>
+				<span class="tech-tag">CQRS</span><span class="tech-tag">Git</span><span class="tech-tag">Jira</span><span class="tech-tag">Agile</span>
+            </div>
+        </div>
+    </div>
+    <div class="project">
+        <button onclick="toggleProject(this)">
+            Recognition Platform (CXS) – Engage2Excel
+            <span>▶</span>
+        </button>
+        <div class="project-content">
+            <p><strong>Role:</strong> Full Stack Developer</p>
+            <p>
+			CXS PLATFORM is a unique and custom award options are designed to celebrate employee’s achievements and fit your
+brand and culture. Our Moments Collection is a series of numbers, words, and symbols that acknowledge milestones and
+victories. Our exclusive Stackables are a magnetic, build-an-award system that captures employees’ accomplishments
+during their career in organization and developed web-based reports for high-level managers for different companies, based on their
+subscription to the system.
+			</p>
+			            <p><strong>Responsibilities:</strong></p>
+            <ul>
+                <li>Developed robust APIs to enable seamless data integration and accurate reporting.</li>
+                <li>Contributed to the front-end development using React, creating dynamic and responsive interfaces for end-users to
+access and interact with the reports.</li>
+                <li>Optimized a long-running SQL query (50 sec–105 sec) to execute in just 1– 2.5 seconds by analyzing execution plans,
+restructuring joins, and implementing proper indexing strategies, significantly improving application performance.
+</li>
+				    <li>Designed and implemented backend services to efficiently manage over 4,000,000 records.</li>
+
+			    <li>Optimized database queries to enhance data retrieval speed and performance.</li>
+ <li>Achieved a cost reduction of more than $42,000 annually by eliminating the need for Tableau software.
+</li>
+
+            </ul>
+            <div class="tech-stack">
+			<span class="tech-tag">Microservice</span><span class="tech-tag">Docker</span><span class="tech-tag">RabbitMQ</span><span class="tech-tag">MSSQL Server</span><span class="tech-tag">OAuth, JWT</span>
+               <span class="tech-tag">ASP.NET Core</span> <span class="tech-tag">EntityFramework</span> <span class="tech-tag">Highcharts</span> 
+			   <span class="tech-tag">React.js</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Zustand</span><span class="tech-tag">AzureDevOPs</span>
+			   <span class="tech-tag">CQRS</span><span class="tech-tag">MediatR</span><span class="tech-tag">AutoMapper</span><span class="tech-tag">xUnit</span>
+			   
+            </div>
+        </div>
+    </div>
+    <div class="project">
+        <button onclick="toggleProject(this)">
+            Enterprise Project Portfolio (ERP) – Excellerent Solutions
+            <span>▶</span>
+        </button>
+        <div class="project-content">
+            <p><strong>Role:</strong> Full Stack Developer</p>
+            <p>
+			The Enterprise Project Portfolio is a comprehensive ERP (Enterprise Resource Planning) system developed to streamline
+and automate various daily tasks across an organization. It is designed to improve efficiency, transparency, and
+collaboration by integrating key business processes into a single platform. The system is composed of six essential
+modules, each serving a specific purpose within the organization:
+
+			</p>
+						            <p><strong>Modules:</strong></p>
+            <ol>
+                <li><strong>Timesheet Module </strong>- Automates the tracking of employee work hours, attendance, and leave management.
+Employees can log their hours, and managers can monitor productivity and approve timesheets.</li>
+                <li><strong>Project Management Module</strong> - Provides tools for planning, executing, and monitoring projects. This includes
+task assignments, milestones, deadlines, resource allocation, and progress tracking.
+</li>
+                <li><strong>Employee Registration Module </strong>- Manages employee data from onboarding to offboarding. This includes personal
+details, job roles, salary information, and more.
+
+</li>
+				    <li><strong>Applicant Tracking Module</strong> - Automates the recruitment process by managing job postings, candidate
+applications, interviews, and selection processes.
+</li>
+
+			    <li><strong>Performance Management Module</strong> - Enables continuous monitoring and evaluation of employee performance
+against set goals. Includes features for goal setting, performance reviews, feedback, and appraisal management.</li>
+
+</li>
+
+            </ol>
+									           <br/> <p><strong>Responsibilities:</strong></p>
+            <ul>
+                <li>Designed and implementing RESTful APIs with ASP.NET Core to handle data exchange between the frontend and
+backend, ensuring efficient and secure communication.</li>
+                <li>Collaborating with UI/UX designers to translate design mockups into responsive and user-friendly Angular
+components, while adhering to best practices in web development.
+</li>
+                <li>Collaborated with cross-functional teams to define project scope, set timelines, and ensure on-time delivery of
+features.
+
+</li>
+				    <li>Optimizing application performance and scalability, focusing on both frontend performance (Angular) and backend
+efficiency (ASP.NET Core), including database management and server-side logic.
+</li>
+
+
+            </ul>
+
+            <div class="tech-stack">
+                <span class="tech-tag">Angular</span> <span class="tech-tag">RxJs</span> <span class="tech-tag">Backgroundservice</span>
+				<span class="tech-tag">Chart.js</span> <span class="tech-tag">Bitbucket</span> <span class="tech-tag">Git</span>
+				<span class="tech-tag">ASP.NET Core</span><span class="tech-tag">PostgreSQL</span> <span class="tech-tag">Angular</span>
+				<span class="tech-tag">xUnit</span><span class="tech-tag">BenchmarkDotNet</span> <span class="tech-tag">Swagger</span>
+				 <span class="tech-tag">Docker</span> <span class="tech-tag">AntDesign</span>
+            </div>
+        </div>
+    </div>
+    <div class="project">
+        <button onclick="toggleProject(this)">
+            Event Management Systems – Altour, McDonald's, MasterCard
+            <span>▶</span>
+        </button>
+        <div class="project-content">
+            <p><strong>Role:</strong> Web Developer</p>
+            <p>created a cloud-based registration and payment processing software that empowers you to manage your entire event life
+cycle, from initial planning to final event reporting. This powerful registration tool can meet the needs of in-person, hybrid,
+and virtual events of all shapes and sizes, from a free educational series to a small training to a thousand-person
+conference.
+</p>
+<p><strong>Which includes:</strong></p>
+            <ul>
+                <li>Registrant Check-in Application
+</li>
+                <li>Event and Session Surveys
+
+</li>
+                <li>Robust Reporting and Report Portals
+</li>
+				    <li>Session and Credit Tracking
+</li>
+				    <li>Speakers and Exhibitor Management
+
+</li>
+				    <li>Custom Web Design and Registration Experiences
+
+</li>
+
+            </ul>
+			
+			<p><strong>Responsibilities/Achivements:</strong></p>
+            <ul>
+                <li>Developed an event-based web application event management application.
+</li>
+                <li>Worked closely with event managers, marketing teams, and other stakeholders to understand their
+requirements and translate them into technical solutions.
+
+</li>
+                <li>Delivered 85+ projects successfully for US and Europe clients
+</li>
+				    <li>Abled to register 133,000+ attendees with their hotel and flight booking.
+</li>
+
+
+            </ul>
+
+
+            <div class="tech-stack">
+			 <span class="tech-tag">Javascript</span><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span>
+                <span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Cvent</span>
+				<span class="tech-tag">Angular</span><span class="tech-tag">PostgreSQL</span>
+				<span class="tech-tag">AWS</span><span class="tech-tag">Slack</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ====== TESTIMONIALS SECTION ====== -->
+<section id="testimonials">
+    <h2>📜Colleague Testimonials</h2>
+    
+    <div class="testimonials-grid">
+        
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <p>
+				"I'd like to extended my gratitude to Joseph who had worked on my data science project, developing our new-gen high-performance REACT-based client reporting platform. He's friendly, sharp, helpful and was a well-appreciated member of our foundational team for this technology. I am happy to recognize and recommend him for any project. Teams will be lucky to have his talent and energy."
+				
+				</p>
+            </div>
+            <div class="testimonial-author">
+                <div class="author-info">
+			     	<strong>Alex Buchanan</strong>
+                    <span>Product & Project Manager</span>
+                    <span>Engage2Excel</span>
+					    <a href="https://www.linkedin.com/in/josephassefa/details/recommendations/?detailScreenTabIndex=0" 
+       target="_blank" 
+ style="color: #0077b5 !important; display: inline-flex; align-items: center; gap: 0.5rem;"
+       >
+        🔗 View on LinkedIn
+    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <p>
+				"I had the pleasure of working with Yoseph as a fellow developer. He is a highly skilled and dedicated professional, excelling in both front-end and back-end development. Yoseph’s code is clean, efficient, and well-documented. He consistently solves complex problems with ease and is an excellent team player who communicates effectively and supports his colleagues. His commitment to continuous learning and improvement makes him a valuable asset to any team. I highly recommend Yoseph for any development role."
+				
+				</p>
+            </div>
+            <div class="testimonial-author">
+                <div class="author-info">
+				    <strong>Nobel Eskinder</strong>
+                    <span>Senior Software Engineer</span>
+                    <span>MMCY TECH</span>
+										    <a href="https://www.linkedin.com/in/josephassefa/details/recommendations/?detailScreenTabIndex=0" 
+       target="_blank" 
+ style="color: #0077b5 !important; display: inline-flex; align-items: center; gap: 0.5rem;"
+       >
+        🔗 View on LinkedIn
+    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <p>"
+				I am pleased to recommend Yoseph Assefa, who has worked under my supervision on multiple projects at Excellerent Technology Solutions. He has demonstrated exceptional proficiency in React, Angular, ASP.NET Core, and Node.js, consistently delivering high-quality solutions. His excellent communication skills, strong work ethic, and discipline have fostered a positive and productive team environment. Known for his proactive approach and willingness to go above and beyond, Yoseph is an invaluable asset to any team. I am confident he will excel and make significant contributions wherever he goes.
+I am pleased to recommend Yoseph Assefa, who has worked under my supervision on multiple projects at Excellerent Technology Solutions. He has demonstrated exceptional proficiency in React, Angular, ASP.NET Core, and Node.js, consistently delivering high-quality solutions. His excellent communication skills, strong work ethic, and discipline have fostered a positive and productive team environment. Known for his proactive approach and willingness to go above and beyond, Yoseph is an invaluable asset to any team. I am confident he will excel and make significant contributions wherever he goes.
+"</p>
+            </div>
+            <div class="testimonial-author">
+                <div class="author-info">
+				<strong>Nathnael Getahun</strong>
+                    <span>Technical Delivery Manager</span>
+                    <span>Excellerentsolutions</span>
+										    <a href="https://www.linkedin.com/in/josephassefa/details/recommendations/?detailScreenTabIndex=0" 
+       target="_blank" 
+ style="color: #0077b5 !important; display: inline-flex; align-items: center; gap: 0.5rem;"
+       >
+        🔗 View on LinkedIn
+    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <p>"It has been a great opportunity to collaborate with Joseph, who consistently exhibits exceptional technical skills, dedication, and leadership. As a senior developer, Joseph has been instrumental in spearheading key projects and mentoring team members, significantly contributing to our success. His problem-solving abilities are remarkable; he has a unique talent for breaking down complex challenges and devising efficient, innovative solutions. Whether it's optimizing our backend systems or creating intuitive frontend interfaces, Joseph consistently delivers top-notch work that exceeds expectations.Beyond his technical expertise, Joseph is an exemplary team player and leader. He fosters a collaborative environment, always eager to share knowledge and support his colleagues' professional growth. His positive attitude, strong communication skills, and willingness to go the extra mile make him a highly respected and valued member of our team. I am confident that Joseph will continue to excel in any future endeavors, and I highly recommend him for any opportunity that seeks a talented and driven senior developer.
+				His contributions have been invaluable to our team, and I look forward to witnessing his continued success."</p>
+            </div>
+            <div class="testimonial-author">
+                <div class="author-info">
+				<strong>Bereket Tewelde </strong>
+                    <span>Product Owner</span>
+                    <span>Team Lead</span>
+										    <a href="https://www.linkedin.com/in/josephassefa/details/recommendations/?detailScreenTabIndex=0" 
+       target="_blank" 
+ style="color: #0077b5 !important; display: inline-flex; align-items: center; gap: 0.5rem;"
+       >
+        🔗 View on LinkedIn
+    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+
+
+<section id="education">
+
+    <h2><span style="font-size: 2rem; filter: sepia(1) saturate(5) hue-rotate(0deg) brightness(1.2);">🎓</span>Education</h2>
+    <p><strong>B.Sc. in Software Engineering</strong></p>
+    <p>College of Computing and Informatics (2015 – 2018)</p><br/>
+	<p><strong>Certficate</strong></p>
+    <p>Oracle Database Administration (2019)</p>
+</section>
+
+<section id="contact">
+    <h2>📧Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:yosephassefa85@gmail.com">yosephassefa85@gmail.com</a></p>
+    <p><strong>Phone:</strong> +251 945 948 911</p>
+    <div class="contact-links">
+        <!-- Replace # with your actual profile URLs -->
+        <a href="https://www.linkedin.com/in/josephassefa/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/JosephAssefa-tech" target="_blank">GitHub</a>
+    </div>
+</section>
+
+</div>
+
+<footer>
+    © 2025 Joseph Assefa. All rights reserved.
+</footer>
+<script>
+// Existing function - keep this
+function toggleProject(btn) {
+    const projectDiv = btn.closest('.project');
+    projectDiv.classList.toggle('active');
+}
+
+// New functions for charts - add these
+document.addEventListener('DOMContentLoaded', function() {
+    // Animate skill bars with delay
+    const skillBars = document.querySelectorAll('.skill-bar');
+    skillBars.forEach((bar, index) => {
+        bar.style.setProperty('--index', index);
+        
+        // Add hover effect
+        bar.addEventListener('mouseenter', function() {
+            const fill = this.querySelector('.bar-fill');
+            if (fill) {
+                const skill = fill.getAttribute('data-skill');
+                // Optional: Add tooltip effect
+                fill.style.transform = 'scaleX(1.02)';
+            }
+        });
+        
+        bar.addEventListener('mouseleave', function() {
+            const fill = this.querySelector('.bar-fill');
+            if (fill) {
+                fill.style.transform = 'scaleX(1)';
+            }
+        });
+    });
+    
+    // Animate donut charts on scroll
+    const observerOptions = {
+        threshold: 0.3
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const donutCharts = entry.target.querySelectorAll('.donut-chart');
+                donutCharts.forEach((chart, index) => {
+                    // Add delay for staggered animation
+                    setTimeout(() => {
+                        const percent = chart.getAttribute('data-percent');
+                        const circle = chart.querySelector('circle:nth-child(2)');
+                        if (circle) {
+                            const radius = 54;
+                            const circumference = 2 * Math.PI * radius;
+                            const offset = circumference - (percent / 100 * circumference);
+                            circle.style.strokeDashoffset = offset;
+                            circle.style.transition = 'stroke-dashoffset 1.5s ease-out';
+                        }
+                    }, index * 300); // Stagger animation
+                });
+                
+                // Stop observing after animation
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    const chartsSection = document.getElementById('skills-visualization');
+    if (chartsSection) {
+        observer.observe(chartsSection);
+    }
+    
+    // Optional: Animate bar charts on scroll too
+    const barObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const barFills = entry.target.querySelectorAll('.bar-fill');
+                barFills.forEach((fill, index) => {
+                    setTimeout(() => {
+                        fill.style.animation = 'fillBar 1.5s ease-out forwards';
+                    }, index * 100);
+                });
+                barObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+    
+    const barsSection = document.querySelector('.detailed-skills');
+    if (barsSection) {
+        barObserver.observe(barsSection);
+    }
+});
+</script>
+
+</body>
+</html>
