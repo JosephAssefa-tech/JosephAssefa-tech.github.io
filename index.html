@@ -534,7 +534,7 @@ color: #3a3a3a !important;
     margin: 0;
     padding-left: 1.2rem;
 }
-/* Video Styles */
+
 .video-demo {
     margin: 2rem 0;
     padding: 1.5rem;
@@ -1393,13 +1393,12 @@ requirements and translate them into technical solutions.
     </div>
 </section>
 
-<!-- ====== TESTIMONIALS SECTION ====== -->
+
 <section id="testimonials">
     <h2>📜Colleague Testimonials</h2>
     
     <div class="testimonials-grid">
-        
-        <!-- Testimonial 1 -->
+
         <div class="testimonial-card">
             <div class="testimonial-content">
                 <p>
@@ -1422,7 +1421,6 @@ requirements and translate them into technical solutions.
             </div>
         </div>
         
-        <!-- Testimonial 2 -->
         <div class="testimonial-card">
             <div class="testimonial-content">
                 <p>
@@ -1444,8 +1442,7 @@ requirements and translate them into technical solutions.
                 </div>
             </div>
         </div>
-        
-        <!-- Testimonial 3 -->
+
         <div class="testimonial-card">
             <div class="testimonial-content">
                 <p>"
@@ -1468,7 +1465,7 @@ I am pleased to recommend Yoseph Assefa, who has worked under my supervision on 
             </div>
         </div>
 
-        <!-- Testimonial 4 -->
+
         <div class="testimonial-card">
             <div class="testimonial-content">
                 <p>"It has been a great opportunity to collaborate with Joseph, who consistently exhibits exceptional technical skills, dedication, and leadership. As a senior developer, Joseph has been instrumental in spearheading key projects and mentoring team members, significantly contributing to our success. His problem-solving abilities are remarkable; he has a unique talent for breaking down complex challenges and devising efficient, innovative solutions. Whether it's optimizing our backend systems or creating intuitive frontend interfaces, Joseph consistently delivers top-notch work that exceeds expectations.Beyond his technical expertise, Joseph is an exemplary team player and leader. He fosters a collaborative environment, always eager to share knowledge and support his colleagues' professional growth. His positive attitude, strong communication skills, and willingness to go the extra mile make him a highly respected and valued member of our team. I am confident that Joseph will continue to excel in any future endeavors, and I highly recommend him for any opportunity that seeks a talented and driven senior developer.
@@ -1533,7 +1530,6 @@ I am pleased to recommend Yoseph Assefa, who has worked under my supervision on 
     <p><strong>Email:</strong> <a href="mailto:yosephassefa85@gmail.com">yosephassefa85@gmail.com</a></p>
     <p><strong>Phone:</strong> +251 945 948 911</p>
     <div class="contact-links">
-        <!-- Replace # with your actual profile URLs -->
         <a href="https://www.linkedin.com/in/josephassefa/" target="_blank">LinkedIn</a>
         <a href="https://github.com/JosephAssefa-tech" target="_blank">GitHub</a>
     </div>
@@ -1553,17 +1549,14 @@ function toggleProject(btn) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Animate skill bars with delay
     const skillBars = document.querySelectorAll('.skill-bar');
     skillBars.forEach((bar, index) => {
         bar.style.setProperty('--index', index);
         
-        // Add hover effect
         bar.addEventListener('mouseenter', function() {
             const fill = this.querySelector('.bar-fill');
             if (fill) {
                 const skill = fill.getAttribute('data-skill');
-                // Optional: Add tooltip effect
                 fill.style.transform = 'scaleX(1.02)';
             }
         });
@@ -1576,7 +1569,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Animate donut charts on scroll
     const observerOptions = {
         threshold: 0.3
     };
@@ -1586,7 +1578,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 const donutCharts = entry.target.querySelectorAll('.donut-chart');
                 donutCharts.forEach((chart, index) => {
-                    // Add delay for staggered animation
                     setTimeout(() => {
                         const percent = chart.getAttribute('data-percent');
                         const circle = chart.querySelector('circle:nth-child(2)');
@@ -1597,10 +1588,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             circle.style.strokeDashoffset = offset;
                             circle.style.transition = 'stroke-dashoffset 1.5s ease-out';
                         }
-                    }, index * 300); // Stagger animation
+                    }, index * 300); 
                 });
-                
-                // Stop observing after animation
+
                 observer.unobserve(entry.target);
             }
         });
@@ -1610,8 +1600,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (chartsSection) {
         observer.observe(chartsSection);
     }
-    
-    // Optional: Animate bar charts on scroll too
+
     const barObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
